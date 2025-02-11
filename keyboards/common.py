@@ -11,7 +11,7 @@ def main_menu_keyboard():
 
 def transport_or_cargo_keyboard():
     builder = ReplyKeyboardBuilder()
-    builder.button(text="Cargo")
+    builder.button(text="Yuk")
     builder.button(text="Transport")
     builder.row(KeyboardButton(text="Orqaga"))
     return builder.as_markup(resize_keyboard=True)

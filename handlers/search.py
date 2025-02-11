@@ -7,7 +7,7 @@ from keyboards.search import search_post_pagination_keyboard
 from utils.data_manager import DataManager
 
 async def search_select_type(message: types.Message, state: FSMContext):
-    if message.text == "Cargo":
+    if message.text == "Yuk":
         await state.set_state("search:cargo_name")
         await message.answer("Yuk nomini kiriting:", reply_markup=back_keyboard())
     elif message.text == "Transport":

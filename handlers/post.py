@@ -12,7 +12,7 @@ messages_id = []
 
 async def post_select_type(message: types.Message, state: FSMContext):
     messages_id.append(message.message_id)
-    if message.text == "Cargo":
+    if message.text == "Yuk":
         await state.set_state("post:cargo_name")
         await message.answer("Yukning nomini yozing::", reply_markup=back_keyboard())
 
@@ -180,14 +180,14 @@ async def post_description(message: types.Message, state: FSMContext):
     messages_id.append(message.message_id)
     await state.update_data(description=message.text)
     await state.set_state("post:price")
-    await message.answer("Iltimos narxini so'mda kiriting (masalan: 1000000):", reply_markup=back_keyboard())
+    await message.answer("Yetkazish narxini yozing (so'mda)::", reply_markup=back_keyboard())
 
 
 async def post_vehicle_description(message: types.Message, state: FSMContext):
     messages_id.append(message.message_id)
     await state.update_data(description=message.text)
     await state.set_state("post:vehicle_price")
-    await message.answer("Iltimos narxini so'mda kiriting (masalan: 1000000):", reply_markup=back_keyboard())
+    await message.answer("Yetkazish narxini yozing (so'mda)::", reply_markup=back_keyboard())
 
 
 async def post_price(message: types.Message, state: FSMContext):
@@ -196,7 +196,7 @@ async def post_price(message: types.Message, state: FSMContext):
         price = int(message.text)
         await state.update_data(price=price)
         await state.set_state("post:delivery_datetime")
-        await message.answer("Mahsulotni qachon yuklanadi (kk.oy.yil soat:minut) (masalan: 12.02.2025 16:00):", reply_markup=back_keyboard())
+        await message.answer("Yuklash vaqtini yozing (Quyidagi formatda: 12 02.2025 09:00):", reply_markup=back_keyboard())
     except ValueError:
         await message.answer('Iltimos faqat son kiriting')
 
@@ -207,7 +207,7 @@ async def post_vehicle_price(message: types.Message, state: FSMContext):
         price = int(message.text)
         await state.update_data(price=price)
         await state.set_state("post:delivery_datetime")
-        await message.answer("Qachon yuklanishi mumkin (kk.oy.yil soat:minut) (masalan: 12.02.2025 16:00):", reply_markup=back_keyboard())
+        await message.answer("Yuklash vaqtini yozing (Quyidagi formatda: 12 02.2025 09:00):", reply_markup=back_keyboard())
     except ValueError:
         await message.answer('Iltimos faqat son kiriting')
 
