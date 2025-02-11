@@ -7,6 +7,6 @@ from aiogram.enums import ParseMode
 load_dotenv()
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
-ADMIN_IDS = list(map(int, os.getenv("ADMIN_IDS", "123456789").split(',')))
+ADMIN_IDS = list(map(int, os.getenv("ADMIN_IDS").split(',')))
 DATA_FOLDER = "data"
 bot = Bot(token=BOT_TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
