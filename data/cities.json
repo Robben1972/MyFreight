@@ -1,0 +1,847 @@
+{
+    "1": {
+        "id": 1,
+        "region_id": 1,
+        "city_name": "Bekobod"
+    },
+    "2": {
+        "id": 2,
+        "region_id": 1,
+       "city_name": "Bo'stonliq"
+    },
+    "3": {
+        "id": 3,
+        "region_id": 1,
+        "city_name": "Bo'ka"
+    },
+    "4":{
+       "id": 4,
+        "region_id": 1,
+        "city_name": "Chinoz"
+    },
+    "5": {
+       "id": 5,
+        "region_id": 1,
+        "city_name": "Ohangaron"
+    },
+    "6": {
+       "id": 6,
+        "region_id": 1,
+        "city_name": "Oqqo'rg'on"
+    },
+    "7": {
+       "id": 7,
+        "region_id": 1,
+        "city_name": "Parkent"
+    },
+    "8": {
+       "id": 8,
+        "region_id": 1,
+        "city_name": "Piskent"
+    },
+    "9": {
+       "id": 9,
+        "region_id": 1,
+        "city_name": "Quyi Chirchiq"
+    },
+    "10": {
+       "id": 10,
+        "region_id": 1,
+        "city_name": "O'rtachirchiq"
+    },
+    "11": {
+      "id": 11,
+       "region_id": 1,
+        "city_name": "Yangiyo'l"
+    },
+    "12": {
+        "id": 12,
+        "region_id": 1,
+        "city_name": "Yuqori Chirchiq"
+    },
+    "13": {
+        "id": 13,
+        "region_id": 1,
+        "city_name": "Zangiota"
+    },
+    "14": {
+        "id": 14,
+        "region_id": 2,
+        "city_name": "Andijon"
+    },
+    "15": {
+        "id": 15,
+        "region_id": 2,
+        "city_name": "Asaka"
+    },
+    "16": {
+        "id": 16,
+        "region_id": 2,
+        "city_name": "Baliqchi"
+    },
+    "17": {
+        "id": 17,
+        "region_id": 2,
+        "city_name": "Bo'ston"
+    },
+    "18": {
+        "id": 18,
+        "region_id": 2,
+        "city_name": "Buloqboshi"
+    },
+    "19": {
+        "id": 19,
+        "region_id": 2,
+        "city_name": "Izboskan"
+    },
+    "20": {
+        "id": 20,
+        "region_id": 2,
+        "city_name": "Jalolquduq"
+    },
+    "21": {
+        "id": 21,
+        "region_id": 2,
+        "city_name": "Marhamat"
+    },
+    "22": {
+        "id": 22,
+        "region_id": 2,
+        "city_name": "Oltinko'l"
+    },
+    "23": {
+        "id": 23,
+        "region_id": 2,
+        "city_name": "Paxtaobod"
+    },
+    "24": {
+        "id": 24,
+        "region_id": 2,
+        "city_name": "Qo'rg'ontepa"
+    },
+    "25": {
+        "id": 25,
+        "region_id": 2,
+        "city_name": "Shahrixon"
+    },
+    "26": {
+        "id": 26,
+        "region_id": 2,
+        "city_name": "Ulug'nor"
+    },
+    "27": {
+        "id": 27,
+        "region_id": 2,
+        "city_name": "Xo'jaobod"
+    },
+    "28": {
+        "id": 28,
+        "region_id": 3,
+        "city_name": "Farg'ona"
+    },
+    "29": {
+        "id": 29,
+        "region_id": 3,
+        "city_name": "Bag'dod"
+    },
+    "30": {
+        "id": 30,
+        "region_id": 3,
+        "city_name": "Beshariq"
+    },
+    "31": {
+        "id": 31,
+        "region_id": 3,
+        "city_name": "Buvayda"
+    },
+    "32": {
+        "id": 32,
+        "region_id": 3,
+        "city_name": "Dang'ara"
+    },
+    "33": {
+        "id": 33,
+        "region_id": 3,
+        "city_name": "Farg'ona"
+    },
+    "34": {
+        "id": 34,
+        "region_id": 3,
+        "city_name": "Furqat"
+    },
+    "35": {
+        "id": 35,
+        "region_id": 3,
+        "city_name": "Oltiariq"
+    },
+    "36": {
+        "id": 36,
+        "region_id": 3,
+        "city_name": "Qo'shtepa"
+    },
+    "37": {
+        "id": 37,
+        "region_id": 3,
+        "city_name": "Quva"
+    },
+    "38": {
+        "id": 38,
+        "region_id": 3,
+        "city_name": "Rishton"
+    },
+    "39": {
+        "id": 39,
+        "region_id": 3,
+        "city_name": "So'x"
+    },
+    "40": {
+        "id": 40,
+        "region_id": 3,
+        "city_name": "Toshloq"
+    },
+    "41": {
+        "id": 41,
+        "region_id": 3,
+        "city_name": "Uchko'prik"
+    },
+    "42": {
+        "id": 42,
+        "region_id": 3,
+        "city_name": "O'zbekiston"
+    },
+    "43": {
+        "id": 43,
+        "region_id": 3,
+        "city_name": "Yozyovon"
+    },
+    "44": {
+        "id": 44,
+        "region_id": 4,
+        "city_name": "Samarqand"
+    },
+    "45": {
+        "id": 45,
+        "region_id": 4,
+        "city_name": "Bulung'ur"
+    },
+    "46": {
+        "id": 46,
+        "region_id": 4,
+        "city_name": "Ishtixon"
+    },
+    "47": {
+        "id": 47,
+        "region_id": 4,
+        "city_name": "Jomboy"
+    },
+    "48": {
+        "id": 48,
+        "region_id": 4,
+        "city_name": "Kattaqo'rg'on"
+    },
+    "49": {
+        "id": 49,
+        "region_id": 4,
+        "city_name": "Narpay"
+    },
+    "50": {
+        "id": 50,
+        "region_id": 4,
+        "city_name": "Nurobod"
+    },
+    "51": {
+        "id": 51,
+        "region_id": 4,
+        "city_name": "Oqdaryo"
+    },
+    "52": {
+        "id": 52,
+        "region_id": 4,
+        "city_name": "Paxtachi"
+    },
+    "53": {
+        "id": 53,
+        "region_id": 4,
+        "city_name": "Payariq"
+    },
+    "54": {
+        "id": 54,
+        "region_id": 4,
+        "city_name": "Pastdarg'om"
+    },
+    "55": {
+        "id": 55,
+        "region_id": 4,
+        "city_name": "Qo'shrabot"
+    },
+    "56": {
+        "id": 56,
+        "region_id": 4,
+        "city_name": "Toyloq"
+    },
+    "57": {
+        "id": 57,
+        "region_id": 4,
+        "city_name": "Urgut"
+    },
+    "58": {
+        "id": 58,
+        "region_id": 5,
+        "city_name": "Jizzax"
+    },
+    "59": {
+        "id": 59,
+        "region_id": 5,
+        "city_name": "Arnasoy"
+    },
+    "60": {
+        "id": 60,
+        "region_id": 5,
+        "city_name": "Baxmal"
+    },
+    "61": {
+        "id": 61,
+        "region_id": 5,
+        "city_name": "Do'stlik"
+    },
+    "62": {
+        "id": 62,
+        "region_id": 5,
+        "city_name": "Forish"
+    },
+    "63": {
+        "id": 63,
+        "region_id": 5,
+        "city_name": "G'allaorol"
+    },
+    "64": {
+        "id": 64,
+        "region_id": 5,
+        "city_name": "Mirzacho'l"
+    },
+    "65": {
+        "id": 65,
+        "region_id": 5,
+        "city_name": "Paxtakor"
+    },
+    "66": {
+        "id": 66,
+        "region_id": 5,
+        "city_name": "Yangiobod"
+    },
+    "67": {
+        "id": 67,
+        "region_id": 5,
+        "city_name": "Zafarobod"
+    },
+    "68": {
+        "id": 68,
+        "region_id": 5,
+        "city_name": "Zarbdor"
+    },
+    "69": {
+        "id": 69,
+        "region_id": 5,
+        "city_name": "Zomin"
+    },
+    "70": {
+        "id": 70,
+        "region_id": 6,
+        "city_name": "Buxoro"
+    },
+    "71": {
+        "id": 71,
+        "region_id": 6,
+        "city_name": "G'ijduvon"
+    },
+    "72": {
+        "id": 72,
+        "region_id": 6,
+        "city_name": "Jondor"
+    },
+    "73": {
+        "id": 73,
+        "region_id": 6,
+        "city_name": "Kogon"
+    },
+    "74": {
+        "id": 74,
+        "region_id": 6,
+        "city_name": "Olot"
+    },
+    "75": {
+        "id": 75,
+        "region_id": 6,
+        "city_name": "Peshku"
+    },
+    "76": {
+        "id": 76,
+        "region_id": 6,
+        "city_name": "Qorako'l"
+    },
+    "77": {
+        "id": 77,
+        "region_id": 6,
+        "city_name": "Qorovulbozor"
+    },
+    "78": {
+        "id": 78,
+        "region_id": 6,
+        "city_name": "Romitan"
+    },
+    "79": {
+        "id": 79,
+        "region_id": 6,
+        "city_name": "Shofirkon"
+    },
+    "80": {
+        "id": 80,
+        "region_id": 6,
+        "city_name": "Vobkent"
+    },
+    "81": {
+        "id": 81,
+        "region_id": 7,
+        "city_name": "Namangan"
+    },
+    "82": {
+        "id": 82,
+        "region_id": 7,
+        "city_name": "Chortoq"
+    },
+    "83": {
+        "id": 83,
+        "region_id": 7,
+        "city_name": "Chust"
+    },
+    "84": {
+        "id": 84,
+        "region_id": 7,
+        "city_name": "Kosonsoy"
+    },
+    "85": {
+        "id": 85,
+        "region_id": 7,
+        "city_name": "Mingbuloq"
+    },
+    "86": {
+        "id": 86,
+        "region_id": 7,
+        "city_name": "Norin"
+    },
+    "87": {
+        "id": 87,
+        "region_id": 7,
+        "city_name": "Pop"
+    },
+    "88": {
+        "id": 88,
+        "region_id": 7,
+        "city_name": "To'raqo'rg'on"
+    },
+    "89": {
+        "id": 89,
+        "region_id": 7,
+        "city_name": "Uchqo'rg'on"
+    },
+    "90": {
+        "id": 90,
+        "region_id": 7,
+        "city_name": "Yangiqo'rg'on"
+    },
+    "91": {
+        "id": 91,
+        "region_id": 7,
+        "city_name": "Uychi'ona"
+    },
+    "92": {
+        "id": 92,
+        "region_id": 8,
+        "city_name": "Qarshi"
+    },
+    "93": {
+        "id": 93,
+        "region_id": 8,
+        "city_name": "Chiroqchi"
+    },
+    "94": {
+        "id": 94,
+        "region_id": 8,
+        "city_name": "Dehqonobod"
+    },
+    "95": {
+        "id": 95,
+        "region_id": 8,
+        "city_name": "G'uzor"
+    },
+    "96": {
+        "id": 96,
+        "region_id": 8,
+        "city_name": "Kasbi"
+    },
+    "97": {
+        "id": 97,
+        "region_id": 8,
+        "city_name": "Kitob"
+    },
+    "98": {
+        "id": 98,
+        "region_id": 8,
+        "city_name": "Koson"
+    },
+    "99": {
+        "id": 99,
+        "region_id": 8,
+        "city_name": "Mirishkor"
+    },
+    "100": {
+        "id": 100,
+        "region_id": 8,
+        "city_name": "Muborak"
+    },
+    "101": {
+        "id": 101,
+        "region_id": 8,
+        "city_name": "Nishon"
+    },
+    "102": {
+        "id": 102,
+        "region_id": 8,
+        "city_name": "Shahrisabz"
+    },
+    "103": {
+        "id": 103,
+        "region_id": 8,
+        "city_name": "Yakkabog'"
+    },
+    "104": {
+        "id": 104,
+        "region_id": 9,
+        "city_name": "Navoiy"
+    },
+    "105": {
+        "id": 105,
+        "region_id": 9,
+        "city_name": "Qiziltepa"
+    },
+    "106": {
+        "id": 106,
+        "region_id": 9,
+        "city_name": "Konimex"
+    },
+    "107": {
+        "id": 107,
+        "region_id": 9,
+        "city_name": "Navbahor"
+    },
+    "108": {
+        "id": 108,
+        "region_id": 9,
+        "city_name": "Nurota"
+    },
+    "109": {
+        "id": 109,
+        "region_id": 9,
+        "city_name": "Tomdi"
+    },
+    "110": {
+        "id": 110,
+        "region_id": 9,
+        "city_name": "Uchquduq"
+    },
+    "111": {
+        "id": 111,
+        "region_id": 9,
+        "city_name": "Zarafshon"
+    },
+    "112": {
+        "id": 112,
+        "region_id": 9,
+        "city_name": "Xatirchi"
+    },
+    "113": {
+        "id": 113,
+        "region_id": 10,
+        "city_name": "Guliston"
+    },
+    "114": {
+        "id": 114,
+        "region_id": 10,
+        "city_name": "Boyovut"
+    },
+    "115": {
+        "id": 115,
+        "region_id": 10,
+        "city_name": "Xovos"
+    },
+    "116": {
+        "id": 116,
+        "region_id": 10,
+        "city_name": "Mirzaobod"
+    },
+    "117": {
+        "id": 117,
+        "region_id": 10,
+        "city_name": "Oqoltin"
+    },
+    "118": {
+        "id": 118,
+        "region_id": 10,
+        "city_name": "Sayxunobod"
+    },
+    "119": {
+        "id": 119,
+        "region_id": 10,
+        "city_name": "Sardoba"
+    },
+    "120": {
+        "id": 120,
+        "region_id": 10,
+        "city_name": "Sirdaryo"
+    },
+    "121": {
+        "id": 121,
+        "region_id": 10,
+        "city_name": "Yangiyer"
+    },
+    "122": {
+        "id": 122,
+        "region_id": 11,
+        "city_name": "Termiz"
+    },
+    "123": {
+        "id": 123,
+        "region_id": 11,
+        "city_name": "Angor"
+    },
+    "124": {
+        "id": 124,
+        "region_id": 11,
+        "city_name": "Bandixon"
+    },
+    "125": {
+        "id": 125,
+        "region_id": 11,
+        "city_name": "Boysun"
+    },
+    "126": {
+        "id": 126,
+        "region_id": 11,
+        "city_name": "Denov"
+    },
+    "127": {
+        "id": 127,
+        "region_id": 11,
+        "city_name": "Jarqo'rg'on"
+    },
+    "128": {
+        "id": 128,
+        "region_id": 11,
+        "city_name": "Qiziriq"
+    },
+    "129": {
+        "id": 129,
+        "region_id": 11,
+        "city_name": "Qumqo'rg'on"
+    },
+    "130": {
+        "id": 130,
+        "region_id": 11,
+        "city_name": "Muzrabot"
+    },
+    "131": {
+        "id": 131,
+        "region_id": 11,
+        "city_name": "Oltinsoy"
+    },
+    "132": {
+        "id": 132,
+        "region_id": 11,
+        "city_name": "Sariosiyo"
+    },
+    "133": {
+        "id": 133,
+        "region_id": 11,
+        "city_name": "Sherobod"
+    },
+    "134": {
+        "id": 134,
+        "region_id": 11,
+        "city_name": "Shurchi"
+    },
+    "135": {
+        "id": 135,
+        "region_id": 11,
+        "city_name": "Uzun"
+    },
+    "136": {
+        "id": 136,
+        "region_id": 12,
+        "city_name": "Urganch"
+    },
+    "137": {
+        "id": 137,
+        "region_id": 12,
+        "city_name": "Bog'ot"
+    },
+    "138": {
+        "id": 138,
+        "region_id": 12,
+        "city_name": "Gurlan"
+    },
+    "139": {
+        "id": 139,
+        "region_id": 12,
+        "city_name": "Xiva"
+    },
+    "140": {
+        "id": 140,
+        "region_id": 12,
+        "city_name": "Xonqa"
+    },
+    "141": {
+        "id": 141,
+        "region_id": 12,
+        "city_name": "Hazorasp"
+    },
+    "142": {
+        "id": 142,
+        "region_id": 12,
+        "city_name": "Shovot"
+    },
+    "143": {
+        "id": 143,
+        "region_id": 12,
+        "city_name": "Yangiariq"
+    },
+    "144": {
+        "id": 144,
+        "region_id": 12,
+        "city_name": "Yangibozor"
+    },
+    "145": {
+        "id": 145,
+        "region_id": 13,
+        "city_name": "Nukus"
+    },
+    "146": {
+        "id": 146,
+        "region_id": 13,
+        "city_name": "Amudaryo"
+    },
+    "147": {
+        "id": 147,
+        "region_id": 13,
+        "city_name": "Beruniy"
+    },
+    "148": {
+        "id": 148,
+        "region_id": 13,
+        "city_name": "Chimboy"
+    },
+    "149": {
+        "id": 149,
+        "region_id": 13,
+        "city_name": "Ellikqala"
+    },
+    "150": {
+        "id": 150,
+        "region_id": 13,
+        "city_name": "Kegeyli"
+    },
+    "151": {
+        "id": 151,
+        "region_id": 13,
+        "city_name": "Mo'ynoq"
+    },
+    "152": {
+        "id": 152,
+        "region_id": 13,
+        "city_name": "Qonliko'l"
+    },
+    "153": {
+        "id": 153,
+        "region_id": 13,
+        "city_name": "Qo'ng'irot"
+    },
+    "154": {
+        "id": 154,
+        "region_id": 13,
+        "city_name": "Qorao'zak"
+    },
+    "155": {
+        "id": 155,
+        "region_id": 13,
+        "city_name": "Shumanay"
+    },
+    "156": {
+        "id": 156,
+        "region_id": 13,
+        "city_name": "Taxtako'pir"
+    },
+    "157": {
+        "id": 157,
+        "region_id": 13,
+        "city_name": "To'rtko'l"
+    },
+    "158": {
+        "id": 158,
+        "region_id": 13,
+        "city_name": "Xo'jayli"
+    },
+    "159": {
+        "id": 159,
+        "region_id": 14,
+        "city_name": "Yunusobod"
+    },
+    "160": {
+        "id": 160,
+        "region_id": 14,
+        "city_name": "Mirzo Ulug'bek"
+    },
+    "161": {
+        "id": 161,
+        "region_id": 14,
+        "city_name": "Yashnobod"
+    },
+    "162": {
+        "id": 162,
+        "region_id": 14,
+        "city_name": "Chilonzor"
+    },
+    "163": {
+        "id": 163,
+        "region_id": 14,
+        "city_name": "Sergeli"
+    },
+    "164": {
+        "id": 164,
+        "region_id": 14,
+        "city_name": "Shayxontohur"
+    },
+    "165": {
+        "id": 165,
+        "region_id": 14,
+        "city_name": "Uchtepa"
+    },
+    "166": {
+        "id": 166,
+        "region_id": 14,
+        "city_name": "Bektemir"
+    },
+    "167": {
+        "id": 167,
+        "region_id": 14,
+        "city_name": "Mirobod"
+    },
+    "168": {
+        "id": 168,
+        "region_id": 14,
+        "city_name": "Olmazor"
+    },
+    "169": {
+        "id": 169,
+        "region_id": 14,
+        "city_name": "Yangihayot"
+    }
+}

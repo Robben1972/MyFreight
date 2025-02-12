@@ -1,0 +1,58 @@
+{
+    "1": {
+        "id": 1,
+        "region_name": "Toshkent vil."
+    },
+    "2": {
+        "id": 2,
+        "region_name": "Andijon"
+    },
+    "3": {
+        "id": 3,
+        "region_name": "Farg'ona"
+    },
+     "4": {
+        "id": 4,
+        "region_name": "Samarqand"
+    },
+    "5": {
+        "id": 5,
+        "region_name": "Jizzax"
+    },
+    "6": {
+        "id": 6,
+        "region_name": "Buxoro"
+    },
+    "7": {
+        "id": 7,
+        "region_name": "Namangan"
+    },
+    "8": {
+        "id": 8,
+        "region_name": "Qashqadaryo"
+    },
+    "9":{
+        "id": 9,
+        "region_name": "Navoiy"
+    },
+    "10": {
+        "id": 10,
+        "region_name": "Sirdaryo"
+    },
+    "11":{
+        "id": 11,
+        "region_name": "Surxondaryo"
+    },
+    "12": {
+        "id": 12,
+        "region_name": "Xorazm"
+    },
+    "13": {
+        "id": 13,
+        "region_name": "Qoraqalbog'iston R."
+    },
+    "14": {
+        "id": 14,
+        "region_name": "Toshkent sh."
+    }
+}
