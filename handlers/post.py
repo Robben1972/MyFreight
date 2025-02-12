@@ -14,7 +14,7 @@ async def post_select_type(message: types.Message, state: FSMContext):
     messages_id.append(message.message_id)
     if message.text == "Yuk":
         await state.set_state("post:cargo_name")
-        await message.answer("Yukning nomini yozing::", reply_markup=back_keyboard())
+        await message.answer("Yukning nomini yozing:", reply_markup=back_keyboard())
 
     elif message.text == "Transport":
         await state.set_state("post:trailer_type")
@@ -152,7 +152,7 @@ async def post_city_to(message: types.Message, state: FSMContext):
         if city["city_name"] == message.text:
             await state.update_data(city_id_to=city["id"])
             await state.set_state("post:description")
-            await message.answer("Qo'shimcha izoh qoldiring::", reply_markup=back_keyboard())
+            await message.answer("Qo'shimcha izoh qoldiring:", reply_markup=back_keyboard())
             return
     cities_data = await state.get_data()
     cities = DataManager("cities.json").get_all()
@@ -167,7 +167,7 @@ async def post_vehicle_city_to(message: types.Message, state: FSMContext):
         if city["city_name"] == message.text:
             await state.update_data(city_id_to=city["id"])
             await state.set_state("post:vehicle_description")
-            await message.answer("Qo'shimcha izoh qoldiring::", reply_markup=back_keyboard())
+            await message.answer("Qo'shimcha izoh qoldiring:", reply_markup=back_keyboard())
             return
     cities_data = await state.get_data()
     cities = DataManager("cities.json").get_all()
@@ -180,14 +180,14 @@ async def post_description(message: types.Message, state: FSMContext):
     messages_id.append(message.message_id)
     await state.update_data(description=message.text)
     await state.set_state("post:price")
-    await message.answer("Yetkazish narxini yozing (so'mda)::", reply_markup=back_keyboard())
+    await message.answer("Yetkazish narxini yozing (so'mda):", reply_markup=back_keyboard())
 
 
 async def post_vehicle_description(message: types.Message, state: FSMContext):
     messages_id.append(message.message_id)
     await state.update_data(description=message.text)
     await state.set_state("post:vehicle_price")
-    await message.answer("Yetkazish narxini yozing (so'mda)::", reply_markup=back_keyboard())
+    await message.answer("Yetkazish narxini yozing (so'mda):", reply_markup=back_keyboard())
 
 
 async def post_price(message: types.Message, state: FSMContext):
@@ -196,7 +196,7 @@ async def post_price(message: types.Message, state: FSMContext):
         price = int(message.text)
         await state.update_data(price=price)
         await state.set_state("post:delivery_datetime")
-        await message.answer("Yuklash vaqtini yozing (Quyidagi formatda: 12 02.2025 09:00):", reply_markup=back_keyboard())
+        await message.answer("Yuklash vaqtini yozing (Quyidagi formatda: 12.02.2025 09:00):", reply_markup=back_keyboard())
     except ValueError:
         await message.answer('Iltimos faqat son kiriting')
 
@@ -207,7 +207,7 @@ async def post_vehicle_price(message: types.Message, state: FSMContext):
         price = int(message.text)
         await state.update_data(price=price)
         await state.set_state("post:delivery_datetime")
-        await message.answer("Yuklash vaqtini yozing (Quyidagi formatda: 12 02.2025 09:00):", reply_markup=back_keyboard())
+        await message.answer("Yuklash vaqtini yozing (Quyidagi formatda: 12.02.2025 09:00):", reply_markup=back_keyboard())
     except ValueError:
         await message.answer('Iltimos faqat son kiriting')
 
@@ -232,22 +232,22 @@ async def post_delivery_datetime(message: types.Message, state: FSMContext):
                 data["city_id_to"] = city_to[ids]["city_name"]
                 break
         try:
-            text = f"""Yuk: {data["name"]}
-    Og'irligi: {data["weight"]} kg
-    Yuklanadigan Manzil: {region_from['region_name']} viloyati {data['city_id_from']} shahri
-    Boriladigan Mazil: {region_to['region_name']} viloyati {data['city_id_to']} shahri
-    Izoh: {data["description"]}
-    Narx: {data["price"]}
-    Yuklash Vaqti: {delivery_datetime.strftime('%d.%m.%Y %H:%M')}
+            text = f"""\nYuk: {data["name"]}
+Og'irligi: {data["weight"]} kg
+Yuklanadigan Manzil: {region_from['region_name']} viloyati {data['city_id_from']} shahri
+Boriladigan Mazil: {region_to['region_name']} viloyati {data['city_id_to']} shahri
+Izoh: {data["description"]}
+Narx: {data["price"]}
+Yuklash Vaqti: {delivery_datetime.strftime('%d.%m.%Y %H:%M')}
     """
         except:
-            text = f"""Transport: {data['trailer_type']}
-    Og'irligi: {data["weight"]} kg
-    Yuklanadigan Manzil: {region_from['region_name']} viloyati {data['city_id_from']} shahri
-    Boriladigan Mazil: {region_to['region_name']} viloyati {data['city_id_to']} shahri
-    Izoh: {data["description"]}
-    Narx: {data["price"]}
-    Yuklash Vaqti: {delivery_datetime.strftime('%d.%m.%Y %H:%M')}
+            text = f"""\nTransport: {data['trailer_type']}
+Og'irligi: {data["weight"]} kg
+Yuklanadigan Manzil: {region_from['region_name']} viloyati {data['city_id_from']} shahri
+Boriladigan Mazil: {region_to['region_name']} viloyati {data['city_id_to']} shahri
+Izoh: {data["description"]}
+Narx: {data["price"]}
+Yuklash Vaqti: {delivery_datetime.strftime('%d.%m.%Y %H:%M')}
     """
         await clear_ids(message.from_user.id)
         await message.answer(text, reply_markup=post_confirm_keyboard())
