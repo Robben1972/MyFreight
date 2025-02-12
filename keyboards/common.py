@@ -52,8 +52,7 @@ def get_city_keyboard(cities):
 def get_type_of_trailer_keyboard():
   builder = ReplyKeyboardBuilder()
   trailers = [
-      "Avtovoz", "Avtokran","Benzovoz", "Beton-qorgich", "Izotermik", "Platforma", "Refrigerator", 
-      "Tent", "Tanker","Evakuator","Konteyner","Sementovoz", "Samosval", "Mikro(5T)", "Mikro(2T)","Labo"
+      'Sisterna' , 'Silos', 'Konteyner', 'Samosval', 'Mikro(10T)', 'Mikro(5T)', 'Mikro(2T)', 'Boshqa'
   ]
   for trailer in trailers:
     builder.button(text=trailer)

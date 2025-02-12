@@ -80,7 +80,6 @@ async def search_posts(message: types.Message, state: FSMContext, data): # Added
                 post_data['status'] == "active" and
                 post_data['region_id_from'] == data['region_id_from'] and
                 post_data['region_id_to'] == data['region_id_to'] and
-                post_data['vehicle'] == data['trailer_type'] and
                 post_data['order'] == "transport"
             ):
                 found_posts.append((user_id, post_id, post_data))  # Store user_id and post_id
