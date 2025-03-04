@@ -10,9 +10,9 @@ async def search_select_type(message: types.Message, state: FSMContext):
     if message.text == "Yuk":
         await state.set_state("search:cargo_name")
         await message.answer("Yuk nomini kiriting:", reply_markup=back_keyboard())
-    elif message.text == "Transport":
-        await state.set_state("search:trailer_type")
-        await message.answer("Avtomobil turini tanlang:", reply_markup=get_type_of_trailer_keyboard())
+    # elif message.text == "Transport":
+    #     await state.set_state("search:trailer_type")
+    #     await message.answer("Avtomobil turini tanlang:", reply_markup=get_type_of_trailer_keyboard())
 
 async def search_trailer_type(message: types.Message, state: FSMContext):
     await state.update_data(trailer_type=message.text)

@@ -1,1 +1,19 @@
-{}
+{
+    "1274378031": {
+        "1": {
+            "name": "drtfghj",
+            "vehicle": "Sisterna",
+            "weight": 342,
+            "region_id_from": 3,
+            "city_id_from": 32,
+            "region_id_to": 4,
+            "city_id_to": 48,
+            "delivery_datetime": "2025-02-12T09:00:00",
+            "description": "dfghjnkml",
+            "price": 4567,
+            "status": "active",
+            "created_by": 1274378031,
+            "order": "cargo"
+        }
+    }
+}

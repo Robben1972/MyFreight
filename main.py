@@ -32,9 +32,10 @@ dp.message.register(register.register_fullname, StateFilter("register:fullname")
 
 #post handlers
 dp.message.register(post.post_select_type, StateFilter("post:select_type"))
-dp.message.register(post.post_cargo_name, StateFilter("post:cargo_name"))
+dp.message.register(post.post_trailer_name, StateFilter("post:cargo_name"))
+dp.message.register(post.post_cargo_name, StateFilter("post:weight"))
 dp.message.register(post.post_trailer_type, StateFilter("post:trailer_type"))
-dp.message.register(post.post_weight, StateFilter("post:weight"))
+# dp.message.register(post.post_weight, StateFilter("post:weight"))
 dp.message.register(post.post_vehicle_weight, StateFilter("post:vehicle_weight"))
 dp.message.register(post.post_region_from, StateFilter("post:region_from"))
 dp.message.register(post.post_region_to, StateFilter("post:region_to"))

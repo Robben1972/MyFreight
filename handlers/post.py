@@ -1,7 +1,7 @@
 from aiogram import types
 from aiogram.fsm.context import FSMContext
 from datetime import datetime
-import re  # Import the regular expression module
+import re
 from utils.data_manager import DataManager
 from config import bot
 from keyboards.common import back_keyboard, get_region_keyboard, get_city_keyboard, get_type_of_trailer_keyboard
@@ -16,16 +16,25 @@ async def post_select_type(message: types.Message, state: FSMContext):
         await state.set_state("post:cargo_name")
         await message.answer("Yukning nomini yozing:", reply_markup=back_keyboard())
 
-    elif message.text == "Transport":
-        await state.set_state("post:trailer_type")
-        await message.answer("Treyler nomini tanlang:", reply_markup=get_type_of_trailer_keyboard())
+    # elif message.text == "Transport":
+        # await state.set_state("post:trailer_type")
+        # await message.answer("Treyler turini tanlang:", reply_markup=get_type_of_trailer_keyboard())
 
+
+
+
+async def post_trailer_name(message: types.Message, state: FSMContext):
+    messages_id.append(message.message_id)
+    await state.update_data(name=message.text)
+    await state.set_state("post:trailer_type")
+    await message.answer("Treyler turini tanlang:", reply_markup=get_type_of_trailer_keyboard())
 
 async def post_cargo_name(message: types.Message, state: FSMContext):
     messages_id.append(message.message_id)
     await state.update_data(name=message.text)
     await state.set_state("post:weight")
     await message.answer("Yukning vaznini kiriting (kg):", reply_markup=back_keyboard())
+
 
 
 async def post_trailer_type(message: types.Message, state: FSMContext):
@@ -232,12 +241,13 @@ async def post_delivery_datetime(message: types.Message, state: FSMContext):
                 data["city_id_to"] = city_to[ids]["city_name"]
                 break
         try:
-            text = f"""\nYuk: {data["name"]}
-Og'irligi: {data["weight"]} kg
-Yuklanadigan Manzil: {region_from['region_name']} viloyati {data['city_id_from']} shahri
-Boriladigan Mazil: {region_to['region_name']} viloyati {data['city_id_to']} shahri
+            text = f"""\nYukning Nomi: {data["name"]}
+Yukning Vazni: {data["weight"]} kg
+Yukning Treyler turi: {data['trailer_type']}
+Yuklash Hududi: {region_from['region_name']} - {data['city_id_from']}
+Yetqazish Mazili: {region_to['region_name']} - {data['city_id_to']}
 Izoh: {data["description"]}
-Narx: {data["price"]}
+Yetqazish Narxi: {data["price"]}
 Yuklash Vaqti: {delivery_datetime.strftime('%d.%m.%Y %H:%M')}
     """
         except:

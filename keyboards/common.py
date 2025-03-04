@@ -12,7 +12,7 @@ def main_menu_keyboard():
 def transport_or_cargo_keyboard():
     builder = ReplyKeyboardBuilder()
     builder.button(text="Yuk")
-    builder.button(text="Transport")
+    # builder.button(text="Transport")
     builder.row(KeyboardButton(text="Orqaga"))
     return builder.as_markup(resize_keyboard=True)
 
@@ -52,7 +52,7 @@ def get_city_keyboard(cities):
 def get_type_of_trailer_keyboard():
   builder = ReplyKeyboardBuilder()
   trailers = [
-      'Sisterna' , 'Silos', 'Konteyner', 'Samosval', 'Mikro(10T)', 'Mikro(5T)', 'Mikro(2T)', 'Boshqa'
+      "Avtovoz", "Avtokran","Bort" , "Furgon", "Izotermik", "Platforma", "Refrigerator", "Tent", "Sisterna" , "Silos", "Konteyner", "Samosval", "Mikro(10T)", "Mikro(5T)", "Mikro(2T)", "Boshqa"
   ]
   for trailer in trailers:
     builder.button(text=trailer)
