@@ -14,6 +14,66 @@
             "status": "active",
             "created_by": 1274378031,
             "order": "cargo"
+        },
+        "2": {
+            "name": "Kartoshka",
+            "vehicle": "Izotermik",
+            "weight": 500,
+            "region_id_from": 5,
+            "city_id_from": 63,
+            "region_id_to": 3,
+            "city_id_to": 28,
+            "delivery_datetime": "2025-02-12T09:00:00",
+            "description": "Tez",
+            "price": 1000000000,
+            "status": "active",
+            "created_by": 1274378031,
+            "order": "cargo"
+        },
+        "3": {
+            "name": "cvbnm",
+            "vehicle": "Izotermik",
+            "weight": 12,
+            "region_id_from": 5,
+            "city_id_from": 62,
+            "region_id_to": 5,
+            "city_id_to": 62,
+            "delivery_datetime": "2025-02-12T09:00:00",
+            "description": "dasd",
+            "price": 123,
+            "status": "active",
+            "created_by": 1274378031,
+            "order": "cargo"
+        },
+        "4": {
+            "name": "fghjk",
+            "vehicle": "Izotermik",
+            "weight": 123,
+            "region_id_from": 5,
+            "city_id_from": 62,
+            "region_id_to": 5,
+            "city_id_to": 62,
+            "delivery_datetime": "2025-02-12T09:00:00",
+            "description": "adasd",
+            "price": 123,
+            "status": "active",
+            "created_by": 1274378031,
+            "order": "cargo"
+        },
+        "5": {
+            "name": "Piyoz",
+            "vehicle": "Avtovoz",
+            "weight": 300,
+            "region_id_from": 3,
+            "city_id_from": 31,
+            "region_id_to": 5,
+            "city_id_to": 61,
+            "delivery_datetime": "2025-02-12T09:00:00",
+            "description": "fghj",
+            "price": 20000,
+            "status": "active",
+            "created_by": 1274378031,
+            "order": "cargo"
         }
     }
 }

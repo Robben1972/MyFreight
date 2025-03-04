@@ -4,7 +4,7 @@ from datetime import datetime
 import re
 from utils.data_manager import DataManager
 from config import bot
-from keyboards.common import back_keyboard, get_region_keyboard, get_city_keyboard, get_type_of_trailer_keyboard
+from keyboards.common import back_keyboard, get_region_keyboard, get_city_keyboard, get_type_of_trailer_keyboard, main_menu_keyboard
 from keyboards.post import post_confirm_keyboard
 
 messages_id = []
@@ -41,7 +41,7 @@ async def post_trailer_type(message: types.Message, state: FSMContext):
     messages_id.append(message.message_id)
     await state.update_data(trailer_type=message.text)
     await state.set_state("post:vehicle_weight")
-    await message.answer("Transport og'irligini kiriting (kg):", reply_markup=back_keyboard())
+    await message.answer("Yukning og'irligini kiriting (kg):", reply_markup=back_keyboard())
 
 
 async def post_weight(message: types.Message, state: FSMContext):
@@ -296,9 +296,11 @@ async def confirm_post(call: types.CallbackQuery, state: FSMContext):
         }
         post_manager.create_post(call.from_user.id, post_data)
         await call.message.edit_text(f"E'lon yuklandi", reply_markup=None)
+        await call.message.answer('Kerakli amalni tanlang', reply_markup=main_menu_keyboard())
         await state.clear()
     else:
         await call.message.edit_text("E'lon bekor qilindi", reply_markup=None)
+        await call.message.answer('Kerakli amalni tanlang', reply_markup=main_menu_keyboard())
         await state.clear()
 
 

@@ -124,11 +124,11 @@ async def show_post(call: types.CallbackQuery, state: FSMContext):
                to_city_name = cities_manager[id]["city_name"]
                break
 
-      text = f"""Name: {post['name']}
+      text = f"""Nomi: {post['name']}
 Treyler: {post['vehicle']}
-Og'irligi: {post['weight']}
-Yuklanadigan Viloyat: {from_region_name} - {from_city_name}
-Olib boriladigan Viloyat: {to_region_name} - {to_city_name}
+Yukning Vazni: {post['weight']}
+Yuklanadigan Hududi: {from_region_name} - {from_city_name}
+Yetqazish Manzili: {to_region_name} - {to_city_name}
 Izoh: {post['description']}
 Narxi: {post['price']}
 Status: {post['status']}
