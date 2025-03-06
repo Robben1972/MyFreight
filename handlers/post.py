@@ -245,9 +245,9 @@ async def post_delivery_datetime(message: types.Message, state: FSMContext):
 Yukning Vazni: {data["weight"]} kg
 Yukning Treyler turi: {data['trailer_type']}
 Yuklash Hududi: {region_from['region_name']} - {data['city_id_from']}
-Yetqazish Mazili: {region_to['region_name']} - {data['city_id_to']}
+Yetkazish Mazili: {region_to['region_name']} - {data['city_id_to']}
 Izoh: {data["description"]}
-Yetqazish Narxi: {data["price"]}
+Yetkazish Narxi: {data["price"]}
 Yuklash Vaqti: {delivery_datetime.strftime('%d.%m.%Y %H:%M')}
     """
         except:

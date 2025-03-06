@@ -31,7 +31,7 @@ async def select_transport_or_cargo(message: types.Message, state: FSMContext):
         await message.answer("Nimani e'lon qilmoqchisiz?", reply_markup=transport_or_cargo_keyboard())
 
     elif message.text == "Qidirish":
-       await state.set_state("search:select_type")
+       await state.set_state("search:cargo_name")
        await message.answer("Nimani qidirmoqchisiz?", reply_markup=transport_or_cargo_keyboard())
 
 

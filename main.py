@@ -4,7 +4,7 @@ import asyncio
 from aiogram import Dispatcher
 from aiogram.filters import Command, CommandStart, StateFilter
 from config import bot
-from handlers import common, register, post, search, admin
+from handlers import common, register, post, search, admin, my_posts
 
 logging.basicConfig(level=logging.INFO)
 
@@ -54,7 +54,7 @@ dp.message.register(post.post_delivery_datetime, StateFilter("post:delivery_date
 
 
 #search handlers
-dp.message.register(search.search_select_type, StateFilter("search:select_type"))
+# dp.message.register(search.search_select_type, StateFilter("search:select_type"))
 dp.message.register(search.search_trailer_type, StateFilter("search:trailer_type"))
 dp.message.register(search.search_cargo_name, StateFilter("search:cargo_name"))
 dp.message.register(search.search_region_from, StateFilter("search:region_from"))
@@ -76,6 +76,10 @@ dp.callback_query.register(admin.admin_delete_user, lambda callback: callback.da
 dp.callback_query.register(admin.admin_delete_post, lambda callback: callback.data.startswith("admin_delete_post"))
 dp.callback_query.register(admin.admin_send_message, lambda callback: callback.data == "admin_send_message")
 dp.message.register(admin.admin_send_message_to_all, StateFilter("admin:message"))
+
+#my_posts handlers
+dp.message.register(my_posts.show_my_posts, Command("elonlarim"))
+dp.callback_query.register(my_posts.navigate_my_posts, lambda callback: callback.data.startswith("my_posts:"))
 
 #callback handlers
 dp.callback_query.register(post.confirm_post, lambda callback: callback.data.startswith("confirm_post"))
