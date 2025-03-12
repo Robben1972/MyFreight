@@ -39,9 +39,11 @@ async def search_region_from(message: types.Message, state: FSMContext):
     for region_item in region.values():
         if region_item["region_name"] == message.text:
             await state.update_data(region_id_from=region_item["id"])
-            regions = DataManager("regions.json").get_all()
-            await state.set_state("search:region_to")
-            await message.answer("Boriladigan Viloyatni tanlang:", reply_markup=get_region_keyboard(regions))
+            data = await state.get_data()
+            # Clear all messages up to this point
+            await clear_ids(message.chat.id, starting_message_id=min(messages_id) if messages_id else None)
+            await state.clear()
+            await search_posts(message, state, data)
             return
     await message.answer("Iltimos to'g'ri viloyatni tanlang:", reply_markup=get_region_keyboard(region))
 
@@ -51,9 +53,11 @@ async def search_region_from_vehicle(message: types.Message, state: FSMContext):
     for region_item in region.values():
         if region_item["region_name"] == message.text:
             await state.update_data(region_id_from=region_item["id"])
-            regions = DataManager("regions.json").get_all()
-            await state.set_state("search:region_to_vehicle")
-            await message.answer("Boriladigan Viloyatni tanlang:", reply_markup=get_region_keyboard(regions))
+            data = await state.get_data()
+            # Clear all messages up to this point
+            await clear_ids(message.chat.id, starting_message_id=min(messages_id) if messages_id else None)
+            await state.clear()
+            await search_posts_vehicles(message, state, data)
             return
     await message.answer("Iltimos to'g'ri viloyatni tanlang:", reply_markup=get_region_keyboard(region))
 
@@ -93,8 +97,7 @@ async def search_posts(message: types.Message, state: FSMContext, data):
         for post_id, post_data in user_posts.items():
             if (
                 post_data['status'] == "active" and
-                post_data['region_id_from'] == data['region_id_from'] and
-                post_data['region_id_to'] == data['region_id_to']
+                post_data['region_id_from'] == data['region_id_from']
             ):
                 found_posts.append((user_id, post_id, post_data))
 
@@ -113,8 +116,7 @@ async def search_posts_vehicles(message: types.Message, state: FSMContext, data)
         for post_id, post_data in user_posts.items():
             if (
                 post_data['status'] == "active" and
-                post_data['region_id_from'] == data['region_id_from'] and
-                post_data['region_id_to'] == data['region_id_to']
+                post_data['region_id_from'] == data['region_id_from']
             ):
                 found_posts.append((user_id, post_id, post_data))
     if found_posts:
@@ -192,7 +194,6 @@ async def make_offer(call: types.CallbackQuery, state: FSMContext):
 
     # Format user information
     user_info = f"Ismi: {user['fullname']}\nTelefon raqami: {user['phone_number'] if '+' in user['phone_number'] else '+'+user['phone_number']} "
-
 
     await call.message.edit_text(f"Shu insonga bog'lanishingiz mumkin\n\n{user_info}")
     await clear_ids(call.message.chat.id)
