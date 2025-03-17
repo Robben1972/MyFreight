@@ -6,7 +6,7 @@ from keyboards.common import back_keyboard, get_region_keyboard, get_type_of_tra
 from keyboards.search import search_post_pagination_keyboard
 from utils.data_manager import DataManager
 from keyboards.common import main_menu_keyboard
-from config import bot  # Import bot from config
+from config import bot
 
 messages_id = []
 
@@ -39,11 +39,8 @@ async def search_region_from(message: types.Message, state: FSMContext):
     for region_item in region.values():
         if region_item["region_name"] == message.text:
             await state.update_data(region_id_from=region_item["id"])
-            data = await state.get_data()
-            # Clear all messages up to this point
-            await clear_ids(message.chat.id, starting_message_id=min(messages_id) if messages_id else None)
-            await state.clear()
-            await search_posts(message, state, data)
+            await state.set_state("search:trailer_type_after_region")
+            await message.answer("Treyler turini tanlang:", reply_markup=get_type_of_trailer_keyboard())
             return
     await message.answer("Iltimos to'g'ri viloyatni tanlang:", reply_markup=get_region_keyboard(region))
 
@@ -53,13 +50,26 @@ async def search_region_from_vehicle(message: types.Message, state: FSMContext):
     for region_item in region.values():
         if region_item["region_name"] == message.text:
             await state.update_data(region_id_from=region_item["id"])
-            data = await state.get_data()
-            # Clear all messages up to this point
-            await clear_ids(message.chat.id, starting_message_id=min(messages_id) if messages_id else None)
-            await state.clear()
-            await search_posts_vehicles(message, state, data)
+            await state.set_state("search:trailer_type_after_region_vehicle")
+            await message.answer("Treyler turini tanlang:", reply_markup=get_type_of_trailer_keyboard())
             return
     await message.answer("Iltimos to'g'ri viloyatni tanlang:", reply_markup=get_region_keyboard(region))
+
+async def search_trailer_type_after_region(message: types.Message, state: FSMContext):
+    messages_id.append(message.message_id)
+    await state.update_data(trailer_type=message.text)
+    data = await state.get_data()
+    await clear_ids(message.chat.id, starting_message_id=min(messages_id) if messages_id else None)
+    await state.clear()
+    await search_posts(message, state, data)
+
+async def search_trailer_type_after_region_vehicle(message: types.Message, state: FSMContext):
+    messages_id.append(message.message_id)
+    await state.update_data(trailer_type=message.text)
+    data = await state.get_data()
+    await clear_ids(message.chat.id, starting_message_id=min(messages_id) if messages_id else None)
+    await state.clear()
+    await search_posts_vehicles(message, state, data)
 
 async def search_region_to(message: types.Message, state: FSMContext):
     messages_id.append(message.message_id)
@@ -68,7 +78,6 @@ async def search_region_to(message: types.Message, state: FSMContext):
         if region_item["region_name"] == message.text:
             await state.update_data(region_id_to=region_item["id"])
             data = await state.get_data()
-            # Clear all messages up to this point
             await clear_ids(message.chat.id, starting_message_id=min(messages_id) if messages_id else None)
             await state.clear()
             await search_posts(message, state, data)
@@ -82,7 +91,6 @@ async def search_region_to_vehicle(message: types.Message, state: FSMContext):
         if region_item["region_name"] == message.text:
             await state.update_data(region_id_to=region_item["id"])
             data = await state.get_data()
-            # Clear all messages up to this point
             await clear_ids(message.chat.id, starting_message_id=min(messages_id) if messages_id else None)
             await state.clear()
             await search_posts_vehicles(message, state, data)
@@ -97,7 +105,8 @@ async def search_posts(message: types.Message, state: FSMContext, data):
         for post_id, post_data in user_posts.items():
             if (
                 post_data['status'] == "active" and
-                post_data['region_id_from'] == data['region_id_from']
+                post_data['region_id_from'] == data['region_id_from'] and
+                post_data.get('vehicle') == data.get('trailer_type')
             ):
                 found_posts.append((user_id, post_id, post_data))
 
@@ -116,7 +125,8 @@ async def search_posts_vehicles(message: types.Message, state: FSMContext, data)
         for post_id, post_data in user_posts.items():
             if (
                 post_data['status'] == "active" and
-                post_data['region_id_from'] == data['region_id_from']
+                post_data['region_id_from'] == data['region_id_from'] and
+                post_data.get('vehicle') == data.get('trailer_type')
             ):
                 found_posts.append((user_id, post_id, post_data))
     if found_posts:
@@ -125,6 +135,8 @@ async def search_posts_vehicles(message: types.Message, state: FSMContext, data)
         await show_post(message, state)
     else:
         await message.answer("Post topilmadi", reply_markup=main_menu_keyboard())
+
+
 
 async def show_post(message: types.Message, state: FSMContext):
     state_data = await state.get_data()
@@ -203,7 +215,6 @@ async def make_offer(call: types.CallbackQuery, state: FSMContext):
 async def clear_ids(chat_id: int, starting_message_id: int = None):
     global messages_id
     try:
-        # If a starting message ID is provided, delete messages from that point onward
         if starting_message_id:
             current_message_id = starting_message_id
             while True:
@@ -211,15 +222,14 @@ async def clear_ids(chat_id: int, starting_message_id: int = None):
                     await bot.delete_message(chat_id, current_message_id)
                     current_message_id += 1
                 except Exception:
-                    break  # Stop when no more messages can be deleted
+                    break
         else:
-            # Otherwise, delete all tracked messages
             for msg_id in messages_id:
                 try:
                     await bot.delete_message(chat_id, msg_id)
                 except Exception:
-                    pass  # Ignore errors for individual messages
-            messages_id = []  # Reset the list after clearing
+                    pass  
+            messages_id = []
     except Exception as e:
         print(f"Error clearing messages: {e}")
     finally:

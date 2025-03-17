@@ -26,7 +26,7 @@
             "delivery_datetime": "2025-02-12T09:00:00",
             "description": "Tez",
             "price": 1000000000,
-            "status": "inactive",
+            "status": "active",
             "created_by": 1274378031,
             "order": "cargo"
         },
